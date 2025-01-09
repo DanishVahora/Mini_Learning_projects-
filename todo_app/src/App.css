@@ -1,0 +1,109 @@
+/* Global Styles */
+body {
+  background-color: black; /* Softer background for better contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the layout fills the screen */
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333; /* Neutral text color */
+}
+
+/* Todo Container */
+.todo-container {
+  width: 350px; /* Slightly wider for a better layout */
+  padding: 20px;
+  border-radius: 20px;
+  background-color: lightgreen; /* Clean white background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #e0e0e0; /* Light border for contrast */
+}
+
+/* Header */
+.todo-header {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: green; /* Green header color for a positive vibe */
+  margin-bottom: 20px;
+}
+
+/* Todo Items */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Slightly off-white for contrast */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Minimal shadow */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.todo-item:hover {
+  background-color: #f0f8ff; /* Light blue on hover */
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Buttons */
+.todo-button {
+  border: none;
+  background-color: green;
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: greem; /* Green for primary action */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.todo-button:hover {
+  background-color: green; /* Darker green on hover */
+  transform: scale(1.1); /* Slight zoom */
+}
+
+.todo-button:active {
+  background-color: #3e8e41; /* Even darker green on click */
+}
+
+/* Input Field */
+.todo-input {
+  width: calc(100% - 10px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.todo-input:focus {
+  border-color: #4caf50; /* Green border on focus */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2); /* Green glow */
+}
+
+/* Add Button */
+
+
+
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .todo-container {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .todo-item {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: flex-start;
+  }
+}
