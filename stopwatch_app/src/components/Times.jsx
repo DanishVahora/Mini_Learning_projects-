@@ -1,10 +1,11 @@
 import React, { useState, useRef } from "react";
+import "./Times.css"; // Import the CSS file
 
 const Times = () => {
-    const [elapsedTime, setElapsedTime] = useState(0); // Total elapsed time in milliseconds
-    const [isRunning, setIsRunning] = useState(false); // Tracks if the stopwatch is running
-    const startTimeRef = useRef(null); // Tracks the starting point of the stopwatch
-    const timerRef = useRef(null); // Stores the interval ID
+    const [elapsedTime, setElapsedTime] = useState(0);
+    const [isRunning, setIsRunning] = useState(false);
+    const startTimeRef = useRef(null);
+    const timerRef = useRef(null);
 
     const formatTime = (time) => {
         const minutes = Math.floor(time / 60000);
@@ -16,11 +17,8 @@ const Times = () => {
 
     const handleStart = () => {
         if (!isRunning) {
-            // Record the start time
             startTimeRef.current = Date.now() - elapsedTime;
             setIsRunning(true);
-
-            // Start an interval to update elapsedTime every millisecond
             timerRef.current = setInterval(() => {
                 setElapsedTime(Date.now() - startTimeRef.current);
             }, 1);
@@ -41,13 +39,14 @@ const Times = () => {
     };
 
     return (
-        <div>
-            <h1>{formatTime(elapsedTime)}</h1>
-
-            <div>
-                <button onClick={handleStart}>Start</button>
-                <button onClick={handleStop}>Stop</button>
-                <button onClick={handleReset}>Reset</button>
+        <div className="stopwatch-container">
+            <div className="stopwatch">
+                <div className="time-display">{formatTime(elapsedTime)}</div>
+                <div className="buttons">
+                    <button className="triangle-button start" onClick={handleStart}>Start</button>
+                    <button className="triangle-button stop" onClick={handleStop}>Stop</button>
+                    <button className="triangle-button reset" onClick={handleReset}>Reset</button>
+                </div>
             </div>
         </div>
     );
