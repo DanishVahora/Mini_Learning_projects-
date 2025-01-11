@@ -1,33 +1,36 @@
 /* Overall container */
 .stopwatch-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f3f4f6; /* Light gray background */
+    background-color: #1f2937; /* Dark charcoal background */
     font-family: "Arial", sans-serif;
+    color: #f3f4f6; /* Light text color */
 }
 
 /* Circular stopwatch */
 .stopwatch {
     position: relative;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, #ffffff, #d1d5db); /* White to light gray gradient */
-    border: 8px solid #6b7280; /* Gray border */
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #2d3748, #1a202c); /* Dark gradient */
+    border: 8px solid #4a5568; /* Slightly lighter gray border */
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 /* Time display inside the stopwatch */
 .time-display {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: #111827; /* Dark gray */
+    color: #fbbf24; /* Bright yellow for visibility */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -36,16 +39,97 @@
 .buttons {
     display: flex;
     justify-content: space-between;
-    padding-top: 45px;
-
-    width: 80%;
+    width: 90%;
 }
 
-/* Triangular buttons */
+/* Buttons */
 .triangle-button {
-    height: 25px;
-    border-radius: 35px;
-    width: 50px;
+    height: 40px;
+    width: 80px;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4a5568; /* Gray button color */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.triangle-button:hover {
+    background-color: #fbbf24; /* Bright yellow on hover */
+    transform: scale(1.1);
+}
+
+.triangle-button:active {
+    transform: scale(0.95);
+}
+
+/* Lap button */
+.lap button {
+    height: 40px;
+    width: 90px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #6b7280; /* Darker gray for lap button */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.lap button:hover {
+    background-color: #38bdf8; /* Light blue on hover */
+    transform: scale(1.1);
+}
+
+.lap button:active {
+    transform: scale(0.95);
+}
+
+/* Lap list */
+.lap-list {
+    width: 350px;
+    max-height: 200px; /* Fixed size container */
+    overflow-y: auto; /* Scrollable when content overflows */
+    background-color: #2d3748; /* Matches stopwatch gradient */
+    border: 2px solid #4a5568;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.lap-list h3 {
+    font-size: 1.5rem;
+    color: #fbbf24; /* Bright yellow for header */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.lap-list p {
+    font-size: 1rem;
+    color: #e2e8f0; /* Light gray text */
+    margin: 5px 0;
+    border-bottom: 1px solid #4a5568;
+    padding: 5px 0;
+}
+
+.lap-list p:last-child {
+    border-bottom: none;
+}
+
+/* Scrollbar styling */
+.lap-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lap-list::-webkit-scrollbar-thumb {
+    background-color: #4a5568; /* Gray scrollbar thumb */
+    border-radius: 8px;
+}
+
+.lap-list::-webkit-scrollbar-track {
+    background-color: #2d3748; /* Matches background */
+}

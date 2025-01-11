@@ -4,7 +4,7 @@ import Times from './Times.jsx'; // Use './' for relative path
 const Header = () => {
   return (
     <>
-      <div className="container" style={"justify-content : center;"}>
+      <div className="container">
         <h1>Stopwatch</h1>
         <Times></Times>
       </div>
