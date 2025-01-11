@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Header = ()=>{
-    return (
-        <h1 className='todo-header'>TO-DO List</h1>
-    )
-}
+const Header = ({ title }) => {
+  return <h1>{title}</h1>;
+};
 
-export default Header
+export default Header;
