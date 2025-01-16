@@ -1,0 +1,152 @@
+/* App.css */
+
+/* Reset and global styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.night {
+    background-color: #263238;
+    color: #eceff1;
+  }
+  
+  body.day {
+    background-color: #e0f7fa;
+    color: #333;
+  }
+  
+  h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container styles */
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00796b;
+  }
+  
+  /* Input styles */
+  input {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #00796b;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #004d40;
+    outline: none;
+    box-shadow: 0 0 5px #004d40;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00796b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Weather Card styles */
+  .weather-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .weather-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #00796b;
+  }
+  
+  .weather-card p {
+    margin: 5px 0;
+  }
+  
+  .weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .weather-info img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .weather-info h2 {
+    font-size: 2rem;
+    color: #00796b;
+  }
+  
+  .additional-info {
+    text-align: left;
+  }
+  
+  .additional-info p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .weather-card {
+      padding: 15px;
+    }
+  
+    .weather-info h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
